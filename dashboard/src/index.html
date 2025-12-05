@@ -10,5 +10,16 @@
 <body>
 <app-root></app-root>
 </body>
-<script async defer src="https://www.mittag.io/e/js"></script>
+<!--<script async defer src="https://www.mittag.io/e/js"></script>-->
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      const script = document.createElement("script");
+      script.src = "https://www.mittag.io/e/js";
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }, 100); // small delay ensures Angular has rendered
+  });
+</script>
 </html>
