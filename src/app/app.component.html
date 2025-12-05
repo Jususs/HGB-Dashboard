@@ -1,22 +1,24 @@
 <h1 class="m-8 text-3xl text-center">Hello, Hgb {{ title }}</h1>
 
 <div class="flex">
-  <article class="flex-auto">
+  <article class="flex-auto ml-20 mr-6">
     <div class="border-4 rounded-4xl border-red-400 text-center">
-      <div class="font-light text-5xl">
-        {{ currentTemperature }} &deg;C
-        {{ weather }}
+      <div>
+        <div class="font-normal text-5xl">
+          {{ currentTemperature }}&deg;C
+        </div>
+        <div class="text-gray-400">
+          Max: {{ dailyMaxTemperature }}&deg;C Min: {{ dailyMinTemperature }}&deg;C
+        </div>
+        <div class="font-extralight text-2xl">
+          {{ weather }}
+        </div>
       </div>
-    </div>
-    <div>
-      Daily Max Temp: {{ dailyMaxTemperature }} &deg;C
-      <br/>
-      Daily Min Temp: {{ dailyMinTemperature }} &deg;C
-    </div>
-    <div>
-      🌇 {{ sunrise | date:"shortTime" }}
-      <br/>
-      🌃 {{ sunset | date:"shortTime" }}
+      <div>
+        🌇 {{ sunrise | date:"shortTime" }}
+        <br/>
+        🌃 {{ sunset | date:"shortTime" }}
+      </div>
     </div>
   </article>
   <div class="flex-auto">
